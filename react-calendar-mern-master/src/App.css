@@ -1,42 +1,41 @@
+html, body {
+    margin: 0 !important;   /* Bootstrap 기본 margin 제거 */
+    padding: 0 !important;  /* Bootstrap 기본 padding 제거 */
+    width: 100vw;
+    height: 100vh;          /* 🎯 100vh 높이 강제 적용 */
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    width: 100%; 
+    height: 100%;
+    max-width: none !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+}
+.app-header { /* JSX에서 <header className="app-header">를 사용한다고 가정 */
+    height: 60px; /* 🎯 헤더 높이 고정 (예시) */
+    flex-shrink: 0;
+    /* 추가 스타일 (선택 사항): */
+    /* background-color: #333; color: white; padding: 0 20px; */
+}
+.main-container {
+    display: flex; 
+    width: 100%; 
+    flex-grow: 1;
+}
+.sidebar {
+    width: 250px; /* 🎯 사이드바 너비 고정 */
+    padding: 15px;
+    background-color: #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0; /* 크기가 줄어들지 않도록 고정 */
+    overflow-y: auto; /* 내용이 넘치면 스크롤 */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.calendar-view {
+    flex-grow: 1; /* 🎯 핵심: 남은 공간을 모두 차지 */
+    padding: 20px;
+    overflow-y: auto;
 }
