@@ -1,4 +1,4 @@
-// src/components/Sidebar.js
+// src/components/Sidebar.jsx
 
 import React from 'react';
 // import './Sidebar.css'; // CSS 파일 불러오기 (필요 시)

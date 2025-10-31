@@ -9,8 +9,8 @@ export const FabAddNew = () => {
 
     const handleClickNew = () => {
         setActiveEvent({
-            title: '할 일을 입력하세요',
-            notes: '메모를 입력하세요',
+            title: '',
+            notes: '',
             start: new Date(),
             end: addHours( new Date(), 2 ),
             bgColor: '#fafafa',

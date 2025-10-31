@@ -151,7 +151,7 @@ export const CalendarModal = () => {
         <input 
             type="text" 
             className={`form-control ${ titleClass }`}
-            placeholder="Título del evento"
+            placeholder="할 일을 입력하세요"
             name="title"
             autoComplete="off"
             value={formValues.title}
@@ -164,7 +164,7 @@ export const CalendarModal = () => {
         <textarea 
             type="text" 
             className="form-control"
-            placeholder="Notas"
+            placeholder="메모를 입력하세요"
             rows="5"
             name="notes"
             value={formValues.notes}

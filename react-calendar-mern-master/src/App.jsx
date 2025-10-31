@@ -1,6 +1,8 @@
-import CalendarComponent from './CalendarComponent';
-import Sidebar from './components/Sidebar'; 
-import './App.css'
+import React from 'react';
+import Header from './components/Header'; // 헤더 컴포넌트 가정
+import Sidebar from './components/Sidebar';
+import CalendarComponent from './components/CalendarComponent'; // 실제 캘린더 컴포넌트 경로로 수정
+import './App.css'; 
 
 function App() {
 
