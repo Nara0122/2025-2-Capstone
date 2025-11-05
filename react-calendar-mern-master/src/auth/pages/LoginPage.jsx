@@ -52,13 +52,13 @@ useEffect(() => {
         <div className="container login-container">
             <div className="row">
                 <div className="col-md-6 login-form-1">
-                    <h3>Ingreso</h3>
+                    <h3>로그인</h3>
                     <form onSubmit={ loginSubmit }>
                         <div className="form-group mb-2">
                             <input 
                                 type="text"
                                 className="form-control"
-                                placeholder="Correo"
+                                placeholder="이메일"
                                 name="loginEmail"
                                 value={ loginEmail }
                                 onChange={ onLoginInputChange }
@@ -68,7 +68,7 @@ useEffect(() => {
                             <input
                                 type="password"
                                 className="form-control"
-                                placeholder="Contraseña"
+                                placeholder="비밀번호"
                                 name="loginPassword"
                                 value={ loginPassword }
                                 onChange={ onLoginInputChange }
@@ -78,20 +78,20 @@ useEffect(() => {
                             <input 
                                 type="submit"
                                 className="btnSubmit"
-                                value="Login" 
+                                value="로그인" 
                             />
                         </div>
                     </form>
                 </div>
 
                 <div className="col-md-6 login-form-2">
-                    <h3>Registro</h3>
+                    <h3>회원가입</h3>
                     <form onSubmit={ registerSubmit }>
                         <div className="form-group mb-2">
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Nombre"
+                                placeholder="이름"
                                 name="registerName"
                                 value={ registerName }
                                 onChange={ onRegisterInputChange }
@@ -101,7 +101,7 @@ useEffect(() => {
                             <input
                                 type="email"
                                 className="form-control"
-                                placeholder="Correo"
+                                placeholder="이메일"
                                 name="registerEmail"
                                 value={ registerEmail }
                                 onChange={ onRegisterInputChange }
@@ -111,7 +111,7 @@ useEffect(() => {
                             <input
                                 type="password"
                                 className="form-control"
-                                placeholder="Contraseña" 
+                                placeholder="비밀번호" 
                                 name="registerPassword"
                                 value={ registerPassword }
                                 onChange={ onRegisterInputChange }
@@ -122,7 +122,7 @@ useEffect(() => {
                             <input
                                 type="password"
                                 className="form-control"
-                                placeholder="Repita la contraseña" 
+                                placeholder="비밀번호 확인" 
                                 name="registerPassword2"
                                 value={ registerPassword2 }
                                 onChange={ onRegisterInputChange }
@@ -133,7 +133,7 @@ useEffect(() => {
                             <input 
                                 type="submit" 
                                 className="btnSubmit" 
-                                value="Crear cuenta" />
+                                value="회원가입" />
                         </div>
                     </form>
                 </div>
