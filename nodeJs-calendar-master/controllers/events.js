@@ -51,14 +51,14 @@ const crearEvento = async( req, res = response ) => {
         if ( !evento ) {
             return res.status(404).json({
                 ok: false,
-                msg: 'Evento no existe por ese id'
+                msg: '일정이 존재하지 않습니다'
             });
         }
 
         if ( evento.user.toString() !== uid ) {
             return res.status(401).json({
                 ok: false,
-                msg: 'No tiene privilegio de editar este evento'
+                msg: '수정 권한이 없습니다'
             });
         }
 
@@ -97,14 +97,14 @@ const eliminarEvento = async( req, res = response ) => {
         if ( !evento ) {
             return res.status(404).json({
                 ok: false,
-                msg: 'Evento no existe por ese id'
+                msg: '해당 일정이 존재하지 않습니다'
             });
         }
 
         if ( evento.user.toString() !== uid ) {
             return res.status(401).json({
                 ok: false,
-                msg: 'No tiene privilegio de eliminar este evento'
+                msg: '수정 권한이 없습니다'
             });
         }
 

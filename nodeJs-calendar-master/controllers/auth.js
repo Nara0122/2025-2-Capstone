@@ -5,8 +5,6 @@ const Usuario = require('../models/Usuario');
 const { generarJWT } = require('../helpers/jwt');
 
 
-
-
 const crearUsuario = async (req, res= response ) => {
 
     const {  email, password } = req.body;
@@ -18,7 +16,7 @@ const crearUsuario = async (req, res= response ) => {
         if ( usuario ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'El usuario ya existe'
+                msg: '사용자가 이미 존재합니다'
             });
         }
          usuario = new Usuario (req.body);
@@ -44,7 +42,7 @@ const crearUsuario = async (req, res= response ) => {
         console.log(error);
         res.status(500).json({
             ok:false ,
-            msg: 'Por favor hable con el administrador',
+            msg: '관리자에게 문의하세요',
          })
     }
   
@@ -63,7 +61,7 @@ const loginUsuario = async (req, res= response ) => {
         if ( !usuario ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'El usuario no existe con ese email'
+                msg: '이메일이 유효하지 않습니다'
             });
         }
 
@@ -73,7 +71,7 @@ const loginUsuario = async (req, res= response ) => {
         if ( !validPassword ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'Password incorrecto'
+                msg: '비밀번호가 틀립니다'
             });
         }
 
@@ -92,7 +90,7 @@ const loginUsuario = async (req, res= response ) => {
         console.log(error);
         res.status(500).json({
             ok: false,
-            msg: 'Por favor hable con el administrador'
+            msg: '관리자에게 문의하세요'
         });
     }
 }

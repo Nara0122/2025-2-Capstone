@@ -24,7 +24,7 @@ export const useAuthStore = () => {
         } catch (error) {    
             
             
-            dispatch( onLogout('Credenciales incorrectas') );
+            dispatch( onLogout('등록되지 않은 아이디입니다') );
             setTimeout(() => {
                 dispatch( clearErrorMessage() );
             }, 10);

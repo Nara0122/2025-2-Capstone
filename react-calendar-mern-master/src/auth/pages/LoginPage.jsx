@@ -44,7 +44,7 @@ const registerSubmit = ( event ) => {
 
 useEffect(() => {
     if ( errorMessage !== undefined ) {
-      Swal.fire('Authentification Failed', errorMessage, 'error');
+      Swal.fire('인증 오류', errorMessage, 'error');
     }    
   }, [errorMessage])
    
