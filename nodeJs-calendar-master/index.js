@@ -1,11 +1,10 @@
 const express = require('express');
 const { dbConnection } = require('./database/config');
 const cors = require('cors');
+const aiRoutes = require('./routes/aiRoutes');
 require ('dotenv').config(); 
 
 console.log(process.env);
-
-
 
 
 //Crear el servidor de express 
@@ -31,7 +30,8 @@ app.use( express.json() );
 app.use('/api/auth', require('./routes/auth') );
 app.use('/api/events', require('./routes/events') );
 
-
+//Routes
+app.use('/api/ai', aiRoutes);
 
 
 
