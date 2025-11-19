@@ -1,7 +1,7 @@
 /* AI 버튼 스타일 (우측 하단, 기존 +버튼보다 조금 위에 배치) */
 .ai-fab {
     position: fixed;
-    bottom: 100px; /* +버튼 위에 위치하도록 */
+    bottom: 120px; /* +버튼 위에 위치하도록 */
     right: 25px;
     width: 60px;
     height: 60px;
