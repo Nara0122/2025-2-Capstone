@@ -8,7 +8,7 @@ router.post('/ask', validarJWT, async (req, res) => {
     try {
         // 1. Gemini 설정 (성공했던 키를 여기에 넣으세요!)
         // 주의: 공백이나 한글이 들어가지 않게 조심하세요.
-        const genAI = new GoogleGenerativeAI("AIzaSyC9SnEgYanLEqzXsrP5gl58Od758DMQSs8"); 
+        const genAI = new GoogleGenerativeAI("___"); 
 
         // 2. 사용자 데이터 가져오기
         const userQuestion = req.body.question;

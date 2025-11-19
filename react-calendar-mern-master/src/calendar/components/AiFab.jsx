@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios'; // npm install axios
 import './AiFab.css'; // 스타일 파일
 
