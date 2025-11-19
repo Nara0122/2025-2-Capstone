@@ -1,0 +1,110 @@
+/* AI 버튼 스타일 (우측 하단, 기존 +버튼보다 조금 위에 배치) */
+.ai-fab {
+    position: fixed;
+    bottom: 100px; /* +버튼 위에 위치하도록 */
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    background-color: #6f42c1; /* 보라색 계열 */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.ai-fab:hover {
+    background-color: #5a32a3;
+}
+
+/* 대화창 스타일 */
+.ai-chat-window {
+    position: fixed;
+    bottom: 170px;
+    right: 25px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.ai-header {
+    background-color: #6f42c1;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ai-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.ai-response-area {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 14px;
+}
+
+.ai-msg {
+    white-space: pre-wrap; /* 줄바꿈 지원 */
+    line-height: 1.5;
+}
+
+.loading {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ai-input-area {
+    display: flex;
+    gap: 5px;
+}
+
+.ai-input-area input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ai-input-area button {
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
