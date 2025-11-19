@@ -1,10 +1,8 @@
 import { useState, useEffect  } from 'react';
 import { Calendar } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import { AiFab } from '../components/AiFab';
 
-
-import { Navbar, CalendarEvent, CalendarModal, FabAddNew , FabDelete} from '../';
+import { Navbar, CalendarEvent, CalendarModal, FabAddNew , FabDelete, AiFab} from '../';
 
 import { localizer ,getMessagesES} from '../../helpers';
 import { useUiStore, useCalendarStore, useAuthStore  } from '../../hooks';

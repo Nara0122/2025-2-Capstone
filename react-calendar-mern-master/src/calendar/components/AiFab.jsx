@@ -38,7 +38,7 @@ export const AiFab = () => {
 
         } catch (error) {
             console.error(error);
-            setAnswer('죄송해요, AI 연결에 실패했어요. (로그인은 하셨나요?)');
+            setAnswer('죄송해요, AI 연결에 실패했어요.');
         } finally {
             setIsLoading(false);
         }
@@ -84,7 +84,7 @@ export const AiFab = () => {
 
             {/* 2. 둥둥 떠있는 🤖 버튼 */}
             <button className="btn btn-primary ai-fab" onClick={toggleChat}>
-                <i className="fas fa-robot"></i> 🤖
+                🤖
             </button>
         </>
     );
