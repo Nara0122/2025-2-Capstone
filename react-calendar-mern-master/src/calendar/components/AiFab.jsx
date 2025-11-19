@@ -8,6 +8,15 @@ export const AiFab = () => {
     const [question, setQuestion] = useState(''); // 사용자의 질문
     const [answer, setAnswer] = useState(''); // AI의 답변
     const [isLoading, setIsLoading] = useState(false); // 로딩 중인지 확인
+    const messagesEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [answer, isLoading, isOpen]);
 
     // 창 열고 닫기
     const toggleChat = () => {
@@ -63,6 +72,8 @@ export const AiFab = () => {
                                 <p className="placeholder">궁금한 점을 물어보세요!<br/>예: 내가 가장 바쁜 요일이 언제야?</p>
                             )}
                             {isLoading && <p className="loading">AI가 생각 중입니다... ⏳</p>}
+                            
+                            <div ref={messagesEndRef} />
                         </div>
 
                         {/* 질문 입력하는 곳 */}
