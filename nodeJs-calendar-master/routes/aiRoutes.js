@@ -6,7 +6,7 @@ const Evento = require('../models/Evento');
 
 router.post('/ask', validarJWT, async (req, res) => {
     try {
-        // 1. Gemini 설정 (성공했던 키를 여기에 넣으세요!)
+        // 1. Gemini 설정 (Gemini key)
         const genAI = new GoogleGenerativeAI("___"); 
 
         // 2. 사용자 데이터 가져오기

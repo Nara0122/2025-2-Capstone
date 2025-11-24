@@ -12,7 +12,7 @@ export const CalendarPage = () => {
   const { user } = useAuthStore();
   const { openDateModal} = useUiStore();
   const { events, setActiveEvent, startLoadingEvents } = useCalendarStore();
-  const [ lastView, setLastView ] = useState(localStorage.getItem('lastView') || 'week' );
+  const [ lastView, setLastView ] = useState(localStorage.getItem('lastView') || 'month' );
 
   const eventStyleGetter = ( event, start, end, isSelected ) => {
 
@@ -56,7 +56,7 @@ export const CalendarPage = () => {
     <>
       <Navbar />
       <Calendar
-      culture='es'
+      culture='ko'
       localizer={localizer}
       events={events}
       defaultView={ lastView }
