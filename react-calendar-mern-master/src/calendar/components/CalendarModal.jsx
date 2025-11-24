@@ -12,8 +12,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import { useCalendarStore , useUiStore } from '../../hooks';
 
-
-import es from 'date-fns/locale/es';
 import ko from "date-fns/locale/ko";
 
 const customStyles = {
@@ -79,8 +77,8 @@ export const CalendarModal = () => {
     }
 
     const onCloseModal = () => {
-        console.log('cerrando modal');
-        closeDateModal();
+        console.log('모달 닫기');
+        closeDateModal();
     }
 
     const onSubmit = async( event ) => {
@@ -90,9 +88,9 @@ export const CalendarModal = () => {
         const difference = differenceInSeconds( formValues.end, formValues.start );
         
         if ( isNaN( difference ) || difference <= 0 ) {
-            Swal.fire('Fechas incorrectas','Revisar las fechas ingresadas','error');
-            console.log('Error en fechas');
-            return;
+            Swal.fire('날짜 오류', '종료 시간은 시작 시간보다 늦어야 합니다.', 'error');
+            console.log('Error en fechas');
+            return;
         }
 
         if ( formValues.title.length <= 0 ) return;

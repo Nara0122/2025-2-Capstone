@@ -4,7 +4,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 import { Navbar, CalendarEvent, CalendarModal, FabAddNew , FabDelete, AiFab} from '../';
 
-import { localizer ,getMessagesES} from '../../helpers';
+import { localizer ,getMessagesKO} from '../../helpers';
 import { useUiStore, useCalendarStore, useAuthStore  } from '../../hooks';
 
 export const CalendarPage = () => {
@@ -63,7 +63,7 @@ export const CalendarPage = () => {
       startAccessor="start"
       endAccessor="end"
       style={{ height: 'calc( 100vh - 80px )' }}
-       messages={ getMessagesES()}
+       messages={ getMessagesKO()}
        eventPropGetter={ eventStyleGetter }
        components={{
         event: CalendarEvent
